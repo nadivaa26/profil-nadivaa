@@ -1,0 +1,43 @@
+html{
+    scroll-behavior: smooth;
+}
+.shape-fill {
+    fill: #749BC2;; 
+  }
+ .aspect-4-3 {
+      position: relative;
+      width: 100%;
+      padding-top: 75%;
+    }
+
+    .aspect-4-3 img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .social-media ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-media ul li a {
+      font-size: 24px;
+      color: #9fc6db;
+      transition: color 0.3s;
+    }
+
+    .social-media ul li a:hover {
+      color: #183B4E;
+    }
