@@ -1,220 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <!-- trigger rebuild -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio -Nadiva</title>
-
-  <!-- Tailwind CSS CDN -->
-  
+  <title>Portofolio Nadiva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS Animation -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-padding-top: 80px;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-white">
+<body class="bg-pink-50 text-pink-800">
   <!-- Navbar -->
-<nav style="background-color: #199CA6;">
-  <div class="container mx-auto flex items-start justify-between px-6 py-2">
-    <!-- Logo -->
-    <div class="text-white text-lg font-semibold">Nadiva Almaghfira</div>
-
-    <!-- Menu Desktop -->
-    <div id="navbar-links" class="hidden md:flex items-center space-x-6">
-      <a href="#home" class="text-white hover:text-white">Beranda</a>
-      <a href="#about" class="text-white hover:text-white">Tentang Saya</a>
-      <a href="#pengalaman" class="text-white hover:text-white" id="scroll-to-pengalaman">Pengalaman Saya</a>
-      <a href="#contact" class="text-white hover:text-white">Contact</a>
-    </div>
-
-    <!-- Hamburger Button (Mobile) -->
-    <div class="md:hidden">
-      <button id="navbar-toggle" class="text-white focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+  <nav class="bg-pink-300 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="text-pink-900 text-xl font-semibold">Nadiva Almaghfira</div>
+      <div class="hidden md:flex space-x-6 text-pink-900 font-medium">
+        <a href="#home" class="hover:underline">Beranda</a>
+        <a href="#about" class="hover:underline">Tentang Saya</a>
+        <a href="#pengalaman" class="hover:underline">Pengalaman</a>
+        <a href="#contact" class="hover:underline">Kontak</a>
+      </div>
+      <button id="navbar-toggle" class="md:hidden text-pink-900">
+        <i class="fas fa-bars text-xl"></i>
       </button>
     </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="navbar-links-mobile" class="md:hidden hidden flex flex-col space-y-3 mt-3 px-6 pb-4 bg-[#0F828C] text-center">
-      <a href="#home" class="text-white hover:text-white">Beranda</a>
-      <a href="#about" class="text-white hover:text-white">Tentang Saya</a>
-      <a href="#pengalaman" class="text-white hover:text-white" id="scroll-to-pengalamant">Pengalaman Saya</a>
-      <a href="#contact" class="text-white hover:text-white">Contact</a>
+    <div id="navbar-links-mobile" class="md:hidden hidden flex flex-col items-center space-y-2 pb-4 bg-pink-200 text-pink-900">
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang Saya</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#contact">Kontak</a>
     </div>
-</nav>
-<!-- WAVE -->
-<div class="custom-shape-divider-top w-full overflow-hidden leading-[0]">
-</div>
+  </nav>
 
-<!-- SECTION -->
-<section class="py-8 pt-16 flex items-center justify-center bg-gradient-to-b from-[#199CA6] to-white">
-  <div class="text-center max-w-2xl px-6">
-    <img src="nadivaaa.jpeg" alt="Foto Profil" class="mx-auto w-40 h-40 rounded-full shadow-lg mb-6">
-    <h1 class="text-4xl md:text-5xl font-bold text-[#0F828C]">Nadiva Almaghfira</h1>
-    <p class="text-lg text-[#0F828C] mt-2">Student | Learn For The Future</p>
-
-    <div class="mt-6 flex justify-center gap-4">
-<a href="#contact" style="background-color:#2aabb7;" class="hover:bg-blue-600 text-white px-6 py-2 rounded-full font-medium shadow">Hubungi Saya</a>
-      <a href="#about" class="border border-[#2aabb7] text-[#2aabb7] px-6 py-2 rounded-full font-medium hover:bg-blue-50">Tentang Saya</a>
-    </div>
-  </div>
-</section>
-
-
-
-
-  <!-- About Section -->
-<section id="about" class="bg-white shadow">
-  <div class="custom-shape-divider-top w-full overflow-hidden leading-[0]">
-</div>
-    <div class="container mx-auto px-6 py-16 text-center" data-aos="fade-up">
-      <h1 class="text-4xl font-bold text-[#199CA6] mb-6" data-aos="fade-down" data-aos-duration="600">Tentang Saya</h1>
-<p class="text-[#199CA6] mb-6" data-aos="fade-down" data-aos-duration="800">Perkenalkan, nama saya Nadiva Almaghfira. Saya kerap disapa Nadiva.</p>
-<p class="text-[#199CA6] mb-6" data-aos="fade-down" data-aos-duration="800">Saya lahir di Kota Malang pada tanggal 26 Februari 2008.</p>
-<p class="text-[#199CA6] mb-6" data-aos="fade-down" data-aos-duration="800">Saya senang mendengarkan musik karena membantu saya lebih fokus dan rileks.</p>
-<p class="text-[#199CA6] mb-6" data-aos="fade-down" data-aos-duration="800">Saya memiliki ketertarikan untuk mengeksplorasi hal-hal baru, terutama di dunia pemrograman dan teknologi.</p>
-    </div>
-    </section>
-
-  <!-- Pengalaman Section -->
-  <section id="pengalaman" class="py-8 bg-white">
-    <div class="custom-shape-divider-top w-full overflow-hidden leading-[0]">
-</div>
-  <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-    <h1 class="text-4xl font-bold text-[#199CA6] mb-6">Pengalaman Saya</h1>
-    <h5 class="text font-semibold text-[#2aabb7] mb-6">Pengalaman di bidang Pemrograman</h5>
-    
-<div class="flex flex-wrap justify-center gap-6">
-  <!-- Card 1 -->
-  <div class="bg-white rounded-lg shadow-md p-4 w-full sm:w-4/4 md:w-1/4" data-aos="fade-up">
-    <div class="aspect-4-3">
-      <img src="im3.png" alt="Project 1" class="w-full rounded-t-lg mx-auto">
-    </div>
-    <h3 class="text-[#199CA6] font-semibold mt-6">Website E-Commerce - Codeigniter</h3>
-    <p class="text-[#199CA6]">Saya pernah membuat Website E-Commerce. Website ini dibangun dengan CodeIgniter 3, MySQL, dan Bootstrap...</p>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="bg-white rounded-lg shadow-md p-4 w-full sm:w-4/4 md:w-1/4" data-aos="fade-up" data-aos-delay="100">
-    <div class="aspect-4-3">
-      <img src="im.png" alt="Project 2" class="w-full rounded-t-lg mx-auto">
-    </div>
-    <h3 class="text-[#199CA6] font-semibold mt-6">Website E-Commerce - Django</h3>
-    <p class="text-[#199CA6]">Saya pernah membuat Website E-Commerce dengan Django dan SQLite...</p>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="bg-white rounded-lg shadow-md p-4 w-full sm:w-4/4 md:w-1/4" data-aos="fade-up">
-    <div class="aspect-4-3">
-      <img src="sertifikat.png" alt="Sertifikat" class="w-full rounded-t-lg mx-auto">
-    </div>
-    <h3 class="text-[#199CA6] font-semibold mt-6">Mengikuti pelatihan belajar dasar Pemrograman Website</h3>
-    <p class="text-[#199CA6]">Pada tahun 2024, saya mengikuti pelatihan melalui Dicoding...</p>
-  </div>
-
-  <!-- Card 4 -->
-  <div class="bg-white rounded-lg shadow-md p-4 w-full sm:w-4/4 md:w-1/4 mx-auto" data-aos="fade-up">
-    <div class="aspect-4-3">
-      <img src="py-sertif.png" alt="Sertifikat" class="w-full rounded-t-lg mx-auto">
-    </div>
-    <h3 class="text-[#199CA6] font-semibold mt-6">Mengikuti pelatihan belajar Python</h3>
-    <p class="text-[#199CA6]">Pada tahun 2024, saya mengikuti pelatihan dasar bahasa Pemrograman Python, Saya belajar melalui Website Kaggle</p>
-  </div>
-</div>
-    </section>
-    <section id="pengalaman2" class="py-8 bg-white">
-   <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-    <p class="text font-semibold text-[#199CA6] mb-6">Pengalaman Organisasi</p>
-    <!-- Flex container -->
-    <div class="flex flex-col md:flex-row md:justify-center md:gap-6 items-stretch">
-      <!-- Card 1 -->
-      <div class="bg-white rounded-lg shadow-md p-4 w-full md:w-1/3 mb-6 md:mb-0">
-        <div class="aspect-5-4">
-          <img src="sertif.png" alt="Wakil Ketua" class="w-full rounded-t-lg mx-auto">
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-b from-pink-200 to-pink-50 py-16 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="text-center md:text-left max-w-xl" data-aos="fade-right">
+        <h1 class="text-4xl md:text-5xl font-bold text-pink-900 mb-4">Halo! Saya <br><span class="text-pink-700">Nadiva Almaghfira</span></h1>
+        <p class="text-lg mb-6">Student | Learn For The Future</p>
+        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+          <a href="#contact" class="bg-pink-700 hover:bg-pink-600 text-white px-6 py-2 rounded-full font-medium shadow transition">Hubungi Saya</a>
+          <a href="#about" class="border border-pink-700 text-pink-700 hover:bg-pink-100 px-6 py-2 rounded-full font-medium transition">Tentang Saya</a>
         </div>
-        <h3 class="text-[#199CA6] font-semibold mt-6">Wakil Ketua Umum 2024–2025</h3>
-       <p class="text-[#199CA6] text-left">
-        Pada tahun 2024–2025, saya menjabat sebagai Wakil Ketua dalam organisasi Badan Dakwah Islam (BDI). Dalam peran ini, saya belajar keterampilan seperti pemecahan masalah, manajemen waktu, public speaking, kerja sama tim, serta membangun komunikasi yang baik dengan pembina, pengurus, dan anggota lainnya.
-        </p>
       </div>
-      <!-- Card 2 -->
-      <div class="bg-white rounded-lg shadow-md p-4 w-full md:w-1/3">
-        <div class="aspect-4-3">
-          <img src="p (1).jpeg" alt="Sertifikat MC" class="w-full rounded-t-lg mx-auto">
-        </div>
-        <h3 class="text-[#199CA6] font-semibold mt-6">Kegiatan Kepanitiaan</h3>
-        <p class="text-[#199CA6] text-left">
-         Selama aktif di organisasi, saya terlibat dalam berbagai kegiatan kepanitiaan. Saya pernah menjadi Ketua Koordinator, Wakil Ketua Pelaksana, Sie Acara, Sie Humas, dan Pengisi Acara. Dari pengalaman ini, saya belajar bekerja sama dalam tim, memecahkan masalah, mengelola keuangan acara, serta meningkatkan rasa tanggung jawab dan kepemimpinan.
-       </p>
+      <div data-aos="fade-left">
+        <img src="nadivaaa.jpeg" alt="Foto Nadiva" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg border-4 border-pink-300" />
       </div>
     </div>
-  </div>
-</section>
-  <!-- Contact Section -->
- <section id="contact" class="bg-white shadow">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-[#199CA6] mb-6">Kontak Saya</h2>
-      <p class="text-[#199CA6]">Terima kasih telah mengenal saya!</p>
-      <p class="text-[#199CA6]">Hubungi saya via sosial media atau email berikut:</p>
-      <p class="text-[#199CA6] mt-2">
-        Email: <a href="mailto:nadivalmaghfira2@gmail.com" class="text-blue-500 underline">nadivalmaghfira2@gmail.com</a>
-      </p>
-        <aside>
-    <div class="social-media">
-      <ul class="flex items-center justify-center gap-4">
-        <li><a href="https://www.linkedin.com/in/nadivaaa-almaghfiraa-84726b333/"><i class="fab fa-linkedin-in"></i></a></li>
-        <li><a href="https://www.instagram.com/nadivalsv/"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://github.com/nadivaa26"><i class="fab fa-github"></i></a></li>
-      </ul>
-    </div>
-  </aside>
-  <section class="bg-white shadow">
-      <p class="text-[#199CA6] mt-4">Salam hangat, <strong>- Nadiva</strong></p>
-    </div>
-    </section>
   </section>
 
-<!-- Footer -->
-<footer class="py-10 bg-gradient-to-b from-white to-[#0F828C] shadow">
-  <div class="container mx-auto px-6 text-center">
-    <p>&copy; 2025 Create by Nadiva Almaghfira.</p>
-  </div>
-</footer>
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-white text-center px-6 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-pink-600 mb-6" data-aos="fade-up">Tentang Saya</h2>
+    <p class="mb-2">Halo! Saya Nadiva Almaghfira, lahir di Malang pada 26 Februari 2008.</p>
+    <p class="mb-2">Saya suka mendengarkan musik, menjelajahi teknologi, dan belajar pemrograman.</p>
+    <p>Saya tertarik dengan dunia IT dan senang belajar hal-hal baru secara mandiri.</p>
+  </section>
 
+  <!-- Pengalaman Section -->
+  <section id="pengalaman" class="bg-pink-100 py-24 px-6">
+    <h2 class="text-3xl font-bold text-center text-pink-600 mb-10" data-aos="fade-up">Pengalaman Saya</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div class="bg-white rounded-lg shadow-md p-4" data-aos="fade-up">
+        <img src="im3.png" alt="Codeigniter Project" class="rounded-lg mb-4">
+        <h3 class="font-semibold text-pink-800">E-Commerce - CodeIgniter</h3>
+        <p class="text-sm">Mengembangkan website toko online menggunakan CodeIgniter 3 dan MySQL.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4" data-aos="fade-up" data-aos-delay="100">
+        <img src="im.png" alt="Django Project" class="rounded-lg mb-4">
+        <h3 class="font-semibold text-pink-800">E-Commerce - Django</h3>
+        <p class="text-sm">Membuat website toko online menggunakan Django dan SQLite.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4" data-aos="fade-up" data-aos-delay="200">
+        <img src="sertifikat.png" alt="Dicoding Certificate" class="rounded-lg mb-4">
+        <h3 class="font-semibold text-pink-800">Pelatihan Website</h3>
+        <p class="text-sm">Mengikuti pelatihan dasar pemrograman web melalui platform Dicoding.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4" data-aos="fade-up" data-aos-delay="300">
+        <img src="py-sertif.png" alt="Python Certificate" class="rounded-lg mb-4">
+        <h3 class="font-semibold text-pink-800">Belajar Python</h3>
+        <p class="text-sm">Mengikuti pelatihan dasar bahasa Python di Kaggle tahun 2024.</p>
+      </div>
+    </div>
 
-<script>
-  AOS.init();
+    <!-- Pengalaman Organisasi -->
+    <div class="mt-16">
+      <h3 class="text-2xl font-semibold text-center text-pink-600 mb-10" data-aos="fade-up">Pengalaman Organisasi</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up">
+          <img src="sertif.png" alt="Wakil Ketua" class="rounded-lg mb-4">
+          <h4 class="text-lg font-semibold text-pink-800">Wakil Ketua Umum BDI 2024–2025</h4>
+          <p class="text-sm">Menjadi Wakil Ketua Umum Badan Dakwah Islam, belajar kepemimpinan, komunikasi, dan manajemen waktu.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+          <img src="p (1).jpeg" alt="Panitia Acara" class="rounded-lg mb-4">
+          <h4 class="text-lg font-semibold text-pink-800">Kepanitiaan Acara</h4>
+          <p class="text-sm">Terlibat dalam berbagai peran seperti Koordinator, Humas, dan Pengisi Acara, serta belajar teamwork dan tanggung jawab.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  // Toggle Navbar Mobile
-  const toggleButton = document.getElementById('navbar-toggle');
-  const navbarMobile = document.getElementById('navbar-links-mobile');
+  <!-- Kontak Section -->
+  <section id="contact" class="py-24 bg-white text-center px-6">
+    <h2 class="text-3xl font-bold text-pink-600 mb-4">Kontak Saya</h2>
+    <p>Email: <a href="mailto:nadivalmaghfira2@gmail.com" class="underline text-pink-700">nadivalmaghfira2@gmail.com</a></p>
+    <div class="mt-4 flex justify-center gap-6 text-2xl text-pink-700">
+      <a href="https://www.linkedin.com/in/nadivaaa-almaghfiraa-84726b333/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/nadivalsv/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/nadivaa26" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="mt-6">Salam hangat, <strong>Nadiva</strong></p>
+  </section>
 
-  toggleButton.addEventListener('click', () => {
-    navbarMobile.classList.toggle('hidden');
-  });
+  <!-- Footer -->
+  <footer class="py-6 bg-gradient-to-b from-white to-pink-200 text-center text-pink-700">
+    <p>&copy; 2025 Dibuat oleh Nadiva Almaghfira.</p>
+  </footer>
 
-  // Scroll to Pengalaman (Smooth)
-  const scrollPengalaman = document.getElementById('scroll-to-pengalaman');
-  scrollPengalaman.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector('#pengalaman').scrollIntoView({ behavior: 'smooth' });
-  });
-</script>
-
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const toggleBtn = document.getElementById('navbar-toggle');
+    const mobileMenu = document.getElementById('navbar-links-mobile');
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
